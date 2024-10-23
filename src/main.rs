@@ -11,6 +11,9 @@ use winapi::shared::windef::{HWND, HHOOK};
 static mut CAPS_HOOK: HHOOK = null_mut();
 const EXIT_HOTKEY: i32 = 1; // Ctrl + Alt + L
 
+// GetForegroundWindow WINAPI Func
+// some types
+
 unsafe fn get_caret_window() -> HWND {
     GetForegroundWindow()
 }
