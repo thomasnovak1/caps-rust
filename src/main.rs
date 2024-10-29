@@ -57,6 +57,7 @@ fn main() {
         }
 
         CAPS_HOOK = SetWindowsHookExW(WH_KEYBOARD_LL, Some(keyboard_proc), h_instance, 0);
+     // Failure handling
         if CAPS_HOOK.is_null() {
             show_error("Failed to set hook");
         }
